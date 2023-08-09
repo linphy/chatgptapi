@@ -1,4 +1,9 @@
+#### [号卡中心-专注优质号卡套餐服务](https://hk.bjjii.com/?p=ookk)
+<a href="https://hk.bjjii.com/?p=ookk">
+<img src="https://img1.131213.xyz/file/9c3e8df16c352c05233ed.png" height="50%" width="50%" /></a>
 
+
+---
 ### Demo
 
 [https://chatai.451024.xyz](https://chatai.451024.xyz)
@@ -24,10 +29,25 @@ https://openai-proxy-api.pages.dev/api
 ![worker](./docs/img/worker.png)
 
 
+## 利用Cloudflare Worker中转api.openai.com
+
+1. 新建一个 Cloudflare Worker
+2. 复制 [cf_worker.js](https://cdn.jsdelivr.net/gh/x-dr/chatgptProxyAPI@main/cf_worker.js)  里的代码粘贴到 Worker 中并部署
+3. 给 Worker 绑定一个没有被墙的域名
+4. 使用自己的域名代替 api.openai.com
+
+
+**[详细教程](./docs/cloudflare_workers.md)**
+
+
+
+***
+
+
 
 ## 使用CloudFlare Pages进行中转
 
-### 1、部署中转API+ Openai API余额查询 
+### 1、部署中转API+ Openai API余额查询 (使用sess-xxxx的Authorization查询，有效时间未知)
 
 > [官方文档](https://developers.cloudflare.com/pages)
 
@@ -53,21 +73,6 @@ https://openai-proxy-api.pages.dev/api
 
 
 **[详细教程](./docs/cloudflare_proxy_pages.md)**
-
-***
-
-
-## 利用Cloudflare Worker中转api.openai.com
-
-1. 新建一个 Cloudflare Worker
-2. 复制 [cf_worker.js](https://cdn.jsdelivr.net/gh/x-dr/chatgptProxyAPI@main/cf_worker.js)  里的代码粘贴到 Worker 中并部署
-3. 给 Worker 绑定一个没有被墙的域名
-4. 使用自己的域名代替 api.openai.com
-
-
-**[详细教程](./docs/cloudflare_workers.md)**
-
-
 
 
 
